@@ -45,7 +45,9 @@ function Profile() {
               
             <h2>{(user.email?user.email:"user")}</h2>
             <div className="profile_plans">
-              <h3>My Available Plans</h3>  
+              <h3>Member since :- {user.created[1]+"/"+user.created[2] + "/" +user.created[3]}</h3>
+              <h3>My Available Plans</h3>
+                
               <button onClick={()=>{
                   auth.signOut();
                   navigate("/")
