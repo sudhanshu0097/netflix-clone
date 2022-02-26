@@ -8,6 +8,7 @@ import { auth } from './firebase';
 import HomeScreen from './HomeScreen';
 import LoginScreen from './LoginScreen';
 import Profile from "./Profile"
+import Tv from './Tv';
 
 function App() {
   const user=useSelector(selectUser)
@@ -42,6 +43,7 @@ useEffect(()=>
      <Routes>
        <Route path='/profile' element={<Profile></Profile>}></Route>
        <Route path='/' element={!user?<LoginScreen/> : <HomeScreen />}></Route>
+       <Route path='/tv' element={<Tv></Tv>}></Route>
        
      </Routes>
       

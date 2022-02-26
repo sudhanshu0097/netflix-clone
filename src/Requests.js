@@ -10,6 +10,15 @@ const requests={
     fetchHorrorMovies:`/discover/movie?api_key=${API_KEY}&with_genres=27`,
     fetchRomanticMovies:`/discover/movie?api_key=${API_KEY}&with_genres=10749`,
     fetchDocumentaries:`/discover/movie?api_key=${API_KEY}&with_genres=99`,
+
+    fetchTvAction:`/discover/tv?api_key=${API_KEY}&with_genres=10759`,
+    fetchTvComedy:`/discover/tv?api_key=${API_KEY}&with_genres=35`,
+    fetchTvCrime:`/discover/tv?api_key=${API_KEY}&with_genres=10759`,
+    fetchTvFamily:`/discover/tv?api_key=${API_KEY}&with_genres=10751`,
+    fetchTvScifi:`/discover/tv?api_key=${API_KEY}&with_genres=10765`,
+    fetchTvKids:`/discover/tv?api_key=${API_KEY}&with_genres=10762`,
+    fetchTvReality:`/discover/tv?api_key=${API_KEY}&with_genres=10764`,
+    
     
 };
 

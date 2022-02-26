@@ -1,64 +1,70 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth } from './firebase';
+import { auth } from "./firebase";
 import "./Nav.css";
 
 function Nav(p) {
+  const [show, handleShow] = useState(false);
+  const navigate = useNavigate();
 
-    const [show,handleShow]=useState(false);
-    const navigate=useNavigate()
-
-    const transitionNavbar=()=>
-    {
-        if(window.scrollY>100)
-        {
-            handleShow(true);
-        }
-        else
-        {
-            handleShow(false);
-        }
+  const transitionNavbar = () => {
+    if (window.scrollY > 100) {
+      handleShow(true);
+    } else {
+      handleShow(false);
     }
+  };
 
-    useEffect(()=>
-    {
-        window.addEventListener("scroll",transitionNavbar);
-        return ()=>window.removeEventListener("scroll",transitionNavbar)
-    },[]);
-
+  useEffect(() => {
+    window.addEventListener("scroll", transitionNavbar);
+    return () => window.removeEventListener("scroll", transitionNavbar);
+  }, []);
 
   return (
     <div className={`nav ${show && "nav_black"}`}>
       <div className="nav_contents">
-
         <div className="nav_logo">
-        <img
-          onClick={()=>{navigate("/")}}
-          
-          src="https://1000logos.net/wp-content/uploads/2017/05/Netflix-Logo.png"
-          alt=""
-        />
+          <img
+            onClick={() => {
+              navigate("/");
+            }}
+            src="https://1000logos.net/wp-content/uploads/2017/05/Netflix-Logo.png"
+            alt=""
+          />
 
-       <a>Home</a>
-       <a>Movies</a>
-       <a>Tv Series</a>
-
+          <a
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Home
+          </a>
+          <a>Movies</a>
+          <a
+            onClick={() => {
+              navigate("/tv");
+            }}
+          >
+            Tv Series
+          </a>
         </div>
         <div className="nav_avatar">
-
-        <a onClick={()=>{auth.signOut()}}>Sign Out</a>  
-        <img
-          onClick={()=>{navigate("/profile")}}
-          
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-          alt=""
-        />
-
-
+          <a
+            onClick={() => {
+              auth.signOut();
+              navigate("/")
+            }}
+          >
+            Sign Out
+          </a>
+          <img
+            onClick={() => {
+              navigate("/profile");
+            }}
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            alt=""
+          />
         </div>
-        
-
-       
       </div>
     </div>
   );
