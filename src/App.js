@@ -7,6 +7,7 @@ import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase';
 import HomeScreen from './HomeScreen';
 import LoginScreen from './LoginScreen';
+import Movie from './Movie';
 import Profile from "./Profile"
 import Tv from './Tv';
 
@@ -44,6 +45,7 @@ useEffect(()=>
        <Route path='/profile' element={<Profile></Profile>}></Route>
        <Route path='/' element={!user?<LoginScreen/> : <HomeScreen />}></Route>
        <Route path='/tv' element={!user?<LoginScreen></LoginScreen> :<Tv></Tv>}></Route>
+       <Route path='/tv' element={!user?<LoginScreen></LoginScreen> :<Movie></Movie>}></Route>
        
      </Routes>
       
