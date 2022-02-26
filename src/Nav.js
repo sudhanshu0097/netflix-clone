@@ -52,14 +52,7 @@ function Nav(p) {
           </a>
         </div>
         <div className="nav_avatar">
-          <a
-            onClick={() => {
-              auth.signOut();
-              navigate("/")
-            }}
-          >
-            Sign Out
-          </a>
+         
           <img
             onClick={() => {
               navigate("/profile");
