@@ -25,6 +25,10 @@ function Movie() {
 
       <Row title="Science-Fiction" fetchUrl={requests.fetchMovieSci} ></Row>
 
+      <Row title="Thriller Movies" fetchUrl={requests.fetchMovieThriller} ></Row>
+
+    
+
       
 
 
