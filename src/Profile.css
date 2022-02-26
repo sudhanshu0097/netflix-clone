@@ -103,3 +103,14 @@
     border-bottom: 1px solid #282c2d;
     padding-bottom: 15px;
 }
+.plan_details
+{
+    padding: 5% 15%;
+
+}
+
+.plan_details_child
+{
+    display: flex;
+    justify-content: space-between;
+}
