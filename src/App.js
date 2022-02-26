@@ -21,11 +21,14 @@ useEffect(()=>
   {
     if(userAuth)
     {
-      console.log(userAuth.email)
+      console.log(userAuth)
+      const created=userAuth.metadata.creationTime.split(" ")
+      console.log(created)
       dispatch(login(
         {
           uid:userAuth.uid,
           email:userAuth.email,
+          created:created
         }));
     }else 
     {
