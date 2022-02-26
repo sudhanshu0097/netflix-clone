@@ -1,6 +1,8 @@
 import React from 'react'
 import Banner from './Banner'
 import Nav from './Nav'
+import requests from './Requests'
+import Row from './Row'
 
 function Movie() {
   return (
@@ -8,6 +10,8 @@ function Movie() {
 
       <Nav/>
       <Banner/>
+
+      <Row title="Adventure Movies" fetchUrl={requests.fetchMovieAdventure} ></Row>
       
     </div>
   )

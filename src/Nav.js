@@ -39,7 +39,10 @@ function Nav(p) {
           >
             Home
           </a>
-          <a>Movies</a>
+          <a onClick={()=>
+            {
+              navigate("/movie")
+            }}>Movies</a>
           <a
             onClick={() => {
               navigate("/tv");
