@@ -43,7 +43,7 @@ useEffect(()=>
      <Routes>
        <Route path='/profile' element={<Profile></Profile>}></Route>
        <Route path='/' element={!user?<LoginScreen/> : <HomeScreen />}></Route>
-       <Route path='/tv' element={<Tv></Tv>}></Route>
+       <Route path='/tv' element={!user?<LoginScreen></LoginScreen> :<Tv></Tv>}></Route>
        
      </Routes>
       
