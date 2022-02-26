@@ -14,6 +14,8 @@ function Movie() {
       <Row title="Adventure Movies" fetchUrl={requests.fetchMovieAdventure} ></Row>
 
       <Row title="Crime Movies" fetchUrl={requests.fetchMovieCrime} ></Row>
+
+      <Row title="Drama Movies" fetchUrl={requests.fetchMovieDrama} ></Row>
       
     </div>
   )
