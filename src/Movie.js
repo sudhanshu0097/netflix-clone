@@ -21,7 +21,11 @@ function Movie() {
 
       <Row title="History Movies" fetchUrl={requests.fetchMovieHistory} ></Row>
 
+      <Row title="Horror Movies" fetchUrl={requests.fetchMovieHorror} ></Row>
+
       
+
+
       
     </div>
   )
